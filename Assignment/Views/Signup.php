@@ -2,7 +2,7 @@
 <?php include '../Controller/usercontrol.php'; ?>
  <html>
     <head></head>
-	<boady>
+	<body>
 	    <div align="center">
 		    <h3>Sign Up</h3>
 			<h5><?php echo $err_db; ?></h5>
@@ -32,6 +32,6 @@
 				</div>
 			</form>
 		</div>
-	</boady>
+	</body>
     <?php include 'main_footer.php'; ?>
 </html>

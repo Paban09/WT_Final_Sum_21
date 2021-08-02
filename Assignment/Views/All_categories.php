@@ -3,7 +3,7 @@
 <?php $categories = getAllCategories(); ?>
 <html>
     <head></head>
-	<boady>
+	<body>
 	    <div align="center">
 		    <h3>All Categories</h3>
 			<h5><?php echo $err_db; ?></h5>
@@ -13,7 +13,7 @@
 					<th>Name</th>
 					
 				</thead>
-				<tboady>
+				<tbody>
 				    <?php
                         $i = 1;
 						foreach($categories as $c){
@@ -25,9 +25,9 @@
 							$i++;
 						}
 					?>
-				</tboady>
+				</tbody>
 			</table>
 		</div>
-	</boady>
+	</body>
     <?php include 'main_footer.php'; ?>
 </html>

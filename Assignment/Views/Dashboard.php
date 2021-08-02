@@ -1,7 +1,7 @@
 <?php include 'main_header.php'; ?>
 <html>
     <head></head>
-	<boady>
+	<body>
 	    <div align="center">
 		    <h3>Login</h3>
 			<h5><?php echo $err_db; ?></h5>
@@ -24,6 +24,6 @@
 				</div>
 			</form>
 		</div>
-	</boady>
+	</body>
     <?php include 'main_footer.php'; ?>
 </html>
