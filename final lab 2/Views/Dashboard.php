@@ -2,9 +2,9 @@
 <?php include 'AdminHeader.php'; ?>
 <html>
     <head></head>
-	<boady>
+	<body>
 	    <div align="center">
 		    <h3>Dashboard</h3>
-	</boady>
+	</body>
     <?php include 'Footer.php'; ?>
 </html>
