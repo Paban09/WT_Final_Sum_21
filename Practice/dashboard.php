@@ -9,7 +9,7 @@
 				
 				
 				<td><button><a target="_blank" href="Home.php" >logout </a></button>
-				
+				<td><button><a target="_blank" href="product.php" >product </a></button>
 			</tr>
 		</div>
 		

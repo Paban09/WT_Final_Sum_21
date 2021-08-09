@@ -1,13 +1,14 @@
 <?php
-	
+	 include 'C:\xampp\htdocs\WT_Final\Practice\model/DBConfig.php';
 	$username="";
 	$err_username="";
 	
 	$password="";
 	$err_password="";
 	$hasError=false;
+	$err_db="";
 	
-if	($_SERVER["REQUEST_METHOD"]=="POST")
+if	(isset($_POST["login"]))
 {
 	if (strlen($_POST["username"])<6)
 
@@ -36,10 +37,10 @@ if(empty($_POST["password"]))
 				$err_password="Password must contain at least 8 characters";
 			}
 
-			elseif ((!strpos($_POST["password"],"#"))||(!strpos($_POST["password"],"?")))
+			 elseif ((!strpos($_POST["password"],"#"))||(!strpos($_POST["password"],"?")))
 				{
 				$hasError=true;
-				$err_password="Password must contain at least 8 characters and 1 special character!";
+				$err_password="Password must contain at least 8 characters and 2 special character!";
 				} 
 
 				elseif(strpos($_POST["password"]," "))
@@ -51,14 +52,30 @@ if(empty($_POST["password"]))
 			{
 				$password=$_POST["password"];
 			}
-			if(!$hasError){
 			
+			
+			if(!$hasError){
+			if(authenticateUser($username,$password)){
 				header("Location: dashboard.php");
 			}
-/*echo "Username: ".htmlspecialchars($_POST["username"])."<br>";
-echo "Password: ".htmlspecialchars($_POST["password"])."<br>";
-*/
-}
+			$err_db = "Invalid User!";
+		  }
+		  
+}  
+		  
+		  function authenticateUser($username,$password){
+		$query = "select * from login where username='$username' and password='$password'";
+		$rs = get($query);
+		if(count($rs)>0){
+			
+			return true;
+			
+		}
+		return false;
+	}
+
+
+
 
 
 	?>

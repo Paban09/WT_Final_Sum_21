@@ -22,7 +22,7 @@
                <tr>
 			   
 			   <td>
-			   <input type="Submit" name="submit" value="confirm">
+			   <input type="Submit" name="login" value="confirm">
 			   
 				
 				
